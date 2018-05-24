@@ -1,0 +1,19 @@
+"a val that equal %[input.val]T(%[input.val]v)":
+- input:  { val: "Hi" }
+  golden: { out: "Hi" }
+- input:  { val: "Hello World" }
+  golden: { out: "Hello World" }
+- input:  { val: 1 }
+  golden: { out: "1" }
+- input:  { val: 12 }
+  golden: { out: "12" }
+- input:  { val: 40.1 }
+  golden: { out: "40.1" }
+- input:  { val: [1, 2] }
+  golden: { out: "[1 2]" }
+- input:  { val: [10, 22, 3] }
+  golden: { out: "[10 22 3]" }
+- input:  { val: ["a", "22", "dp"] }
+  golden: { out: "[a 22 dp]" }
+- input:  { val: { val1: 32, val2: "ab"} }
+  golden: { out: "map[val1:32 val2:ab]" }
