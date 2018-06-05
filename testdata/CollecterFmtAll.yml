@@ -1,0 +1,8 @@
+"a set that equal %[input.arr]v, a format string %[input.format]q":
+- input:  { arr: [["Hi", "Oi"], ["Hey", "Washoi"]], format: "%s and %s" }
+  golden: { arr: ["Hi and Oi", "Hey and Washoi"], str: "Hi and OiHey and Washoi" }
+- input:  { arr: [["image", "jpg"], ["picture", "png"]], format: "Download %s as %s" }
+  golden: { arr: ["Download image as jpg", "Download picture as png"], str: "Download image as jpgDownload picture as png" }
+"a set that equal %[input.arr]v, a format string %[input.format]q and args equal to %[input.args]v":
+- input:  { arr: [["Hi", "Oi"], ["Hey", "Washoi"]], format: "%s... %s", args: ["12:01 - %s and %s", "\t"] }
+  golden: { arr: ["12:01 - Hi and Oi... \t", "12:01 - Hey and Washoi... \t"], str: "12:01 - Hi and Oi... \t12:01 - Hey and Washoi... \t" }

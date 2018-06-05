@@ -1,0 +1,5 @@
+"a set that equal %[input.arr]v":
+- input:  { arr: [["Hi", "Oi"], ["Hey", "Washoi"]], conn: "_" }
+  golden: { arr: ["Hi_Oi", "Hey_Washoi"], str: "Hi_OiHey_Washoi" }
+- input:  { arr: [["image", "jpg"], ["picture", "png"]], conn: "." }
+  golden: { arr: ["image.jpg", "picture.png"], str: "image.jpgpicture.png" }
