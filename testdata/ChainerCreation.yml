@@ -15,5 +15,9 @@
   golden: { out: "[10 22 3]" }
 - input:  { val: ["a", "22", "dp"] }
   golden: { out: "[a 22 dp]" }
-- input:  { val: { val1: 32, val2: "ab"} }
-  golden: { out: "map[val1:32 val2:ab]" }
+"a format that equal %[input.fmt]q and args equal to %[input.args]v":
+- input:  { fmt: "%d %d", args: [1, 2] }
+  golden: { out: "1 2" }
+- input:  { fmt: "->%s:->%s", args: ["ds", "bullet"] }
+  golden: { out: "->ds:->bullet" }
+

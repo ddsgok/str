@@ -1,0 +1,7 @@
+"a set that equal %[input.set]v":
+- input:  { set: ["Hi", "Oi"] }
+  golden: { arr: ["Hi", "Oi"], str: "HiOi" }
+- input:  { set: ["Ola"] }
+  golden: { arr: ["Ola"], str: "Ola" }
+- input:  { set: ["1", "2", "3"] }
+  golden: { arr: ["1", "2", "3"], str: "123" }
