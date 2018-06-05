@@ -1,0 +1,16 @@
+"a set that equal %[input.set]v":
+- input:  { set: [["Hi", "Oi"], ["Hey", "Washoi"]] }
+  golden: {
+    arr: [["Hi", "Oi"], ["Hey", "Washoi"]],
+    anom_arr: [["Hi", "Oi"], ["Hey", "Washoi"]],
+    str: "HiOi HeyWashoi" }
+- input:  { set: ["Hi", "Oi"] }
+  golden: {
+    arr: [["Hi"], ["Oi"]],
+    anom_arr: [["Hi"], ["Oi"]],
+    str: "Hi Oi" }
+- input:  { set: "Hi" }
+  golden: {
+    arr: [["Hi"]],
+    anom_arr: [["Hi"]],
+    str: "Hi" }
