@@ -5,12 +5,12 @@
 /*
 Package str represents a string production line.
 
-This is made with the interfaces in this package Chained and Splitted.
-Each are created using srt.New as starting point, this function will
-convert via fmt.Sprintf, a string to Chained. And then various
-operations can be performed on it.
+This is made with the interfaces in this package Chainer, Splitter and
+Collecter. Each are created using srt.New as starting point, this
+function will convert via fmt.Sprintf, a string to Chainer. And then
+various operations can be performed on it.
 
-Each object have the hability to put its output as a string, as an
+Each object have the ability to put its output as a string, as an
 error and printed onto desired io.Writer.
 
 The package can be used like this:

@@ -20,9 +20,9 @@ go get github.com/ddspog/str
 
 This package represents a string production line.
 
-This is made with the interfaces in this package Chained and Splitted. Each are created using srt.New as starting point, this function will convert via fmt.Sprintf, a string to Chained. And then various operations can be performed on it.
+This is made with the interfaces in this package Chainer, Splitter and Collecter. Each are created using srt.New as starting point, this function will convert via fmt.Sprintf, a string to Chainer. And then various operations can be performed on it.
 
-Each object have the hability to put its output as a string, as an error and printed onto desired io.Writer.
+Each object have the ability to put its output as a string, as an error and printed onto desired io.Writer.
 
 The package can be used like this:
 
@@ -40,7 +40,8 @@ This is due to the objective of this package: to be a clearer tool to operates o
 
 ## Testing
 
-This package needs testing.
+This package has tests covering all code on it. Further additions to
+code should try to follow this.
 
 ## Contribution
 
