@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"os"
 	"strings"
 )
 
@@ -16,19 +17,6 @@ type chained string
 type Chainer interface {
 	Printer
 	Split(string) Splitter
-}
-
-// New creates the Chainer using fmt.Sprintf to ensures string
-// formatting.
-func New(s interface{}, args ...interface{}) (c Chainer) {
-	if len(args) > 0 {
-		sfmt := New(s).String()
-		c = chained(fmt.Sprintf(sfmt, args...))
-	} else {
-		c = chained(fmt.Sprintf("%v", s))
-	}
-
-	return
 }
 
 // Split separates string to a Splitter, an array of strings. It uses
@@ -52,11 +40,31 @@ func (c chained) Error() (err error) {
 
 // Print will log Chainer content to writer received, or os.Stdout as
 // default writer.
-func (c chained) Print(wa ...io.Writer) (n int, err error) {
-	if len(wa) == 0 {
-		n, err = fmt.Print(string(c))
+func (c chained) Print(optWt ...io.Writer) (n int, err error) {
+	var wt io.Writer = os.Stdout
+
+	if len(optWt) != 0 {
+		wt = optWt[0]
+	}
+
+	n, err = fmt.Fprint(wt, string(c))
+	return
+}
+
+// New creates the Chainer using fmt.Sprintf to ensures string
+// formatting.
+func New(s interface{}, args ...interface{}) (c Chainer) {
+	c = chained(Fmt(s, args...))
+	return
+}
+
+// Fmt creates the Chainer using fmt.Sprintf and already returns the
+// string value.
+func Fmt(formatter interface{}, args ...interface{}) (s string) {
+	if len(args) > 0 {
+		s = fmt.Sprintf(Fmt(formatter), args...)
 	} else {
-		n, err = fmt.Fprint(wa[0], string(c))
+		s = fmt.Sprintf("%v", formatter)
 	}
 
 	return
