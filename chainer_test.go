@@ -121,3 +121,46 @@ func Test_Chainer_Split(t *testing.T) {
 		})
 	})
 }
+
+// Feature Chainer SplitN.
+// - As a developer,
+// - I want to split Chainer object into a string array with n string,
+// - So that I can use to other operations.
+func Test_Chainer_SplitN(t *testing.T) {
+	given := bdd.Sentences().Golden()
+
+	input, gold := &struct {
+		Text string `yaml:"text"`
+		Sep  string `yaml:"sep"`
+		N    int    `yaml:"n"`
+	}{}, &struct {
+		Arr     []string      `yaml:"arr"`
+		AnomArr []interface{} `yaml:"anom_arr"`
+	}{}
+
+	given(t, "a text that equal %[input.text]q", func(when bdd.When, golden bdd.Golden) {
+		golden.Load(input, gold)
+		text := input.Text
+
+		when("sa := str.New(text).SplitN(%[input.sep]q, %[input.n]q) is called", func(it bdd.It) {
+			sa := str.New(text).SplitN(input.Sep, input.N)
+
+			arr := sa.Array()
+			anomArr := sa.AnomArray()
+
+			golden.Update(func() interface{} {
+				gold.Arr = arr
+				gold.AnomArr = anomArr
+				return gold
+			})
+
+			it("should have sa.Array() equal to %[golden.arr]q", func(assert bdd.Assert) {
+				assert.Equal(gold.Arr, arr)
+			})
+
+			it("should have s.AnomArray() equal to %[golden.anom_arr]q", func(assert bdd.Assert) {
+				assert.Equal(gold.AnomArr, anomArr)
+			})
+		})
+	})
+}
