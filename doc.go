@@ -26,5 +26,4 @@ performance problems.
 
 This is due to the objective of this package: to be a clearer tool to
 operates on strings.
-*/
-package str
+*/package str
