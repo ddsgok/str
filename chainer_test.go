@@ -3,7 +3,7 @@ package str_test
 import (
 	"testing"
 
-	"github.com/ddspog/bdd"
+	"github.com/ddsgok/bdd"
 	"github.com/ddspog/str"
 )
 
