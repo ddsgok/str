@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/ddsgok/bdd"
-	"github.com/ddspog/str"
+	"github.com/ddsgok/str"
 )
 
 // Feature Chainer creation.

@@ -2,7 +2,7 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-The following is a set of guidelines for contributing to str (golang string factory), which are hosted in the [str](https://github.com/ddspog/str) on GitHub. These are just guidelines, not rules, use your best judgment and feel free to propose changes to this document in a pull request.
+The following is a set of guidelines for contributing to str (golang string factory), which are hosted in the [str](https://github.com/ddsgok/str) on GitHub. These are just guidelines, not rules, use your best judgment and feel free to propose changes to this document in a pull request.
 
 ## Table Of Contents
 
@@ -37,7 +37,7 @@ This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDU
 
 str it's a [Golang](https://golang.org) package that implements a Factory behaviour to operates on strings. This project was created as an clearer interface for strings operations, comprised on one package. It makes extensive use of standard golang packages: **fmt** and **strings**.
 
-Further details on how to use this package are available on the [Wiki](https://github.com/ddspog/str/wiki), and godocs of the package.
+Further details on how to use this package are available on the [Wiki](https://github.com/ddsgok/str/wiki), and godocs of the package.
 
 ## How Can I Contribute
 
@@ -49,13 +49,13 @@ Before creating bug reports, please check [this list](#before-submitting-a-bug-r
 
 #### Before Submitting A Bug Report
 
-* **Check it carefully.** You might be able to find the cause of the problem and fix things yourself. Most importantly, check if you can reproduce the problem [in the latest version of str](https://github.com/ddspog/str).
+* **Check it carefully.** You might be able to find the cause of the problem and fix things yourself. Most importantly, check if you can reproduce the problem [in the latest version of str](https://github.com/ddsgok/str).
 * **Check the FAQs on the forum** for a list of common questions and problems.
-* **Perform a [cursory search](https://github.com/ddspog/str/issues?utf8=%E2%9C%93&q=is%3Aissue+user%3Addspog+)** to see if the problem has already been reported. If it has, add a comment to the existing issue instead of opening a new one.
+* **Perform a [cursory search](https://github.com/ddsgok/str/issues?utf8=%E2%9C%93&q=is%3Aissue+user%3Addspog+)** to see if the problem has already been reported. If it has, add a comment to the existing issue instead of opening a new one.
 
 #### How Do I Submit A (Good) Bug Report
 
-Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). Create an issue on [str](https://github.com/ddspog/str/issues/new) and provide the following information.
+Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). Create an issue on [str](https://github.com/ddsgok/str/issues/new) and provide the following information.
 
 Explain the problem and include additional details to help maintainers reproduce the problem:
 
@@ -93,7 +93,7 @@ Before creating enhancement suggestions, please check [this list](#before-submit
 #### Before Submitting An Enhancement Suggestion
 
 * **Check if this enhancement it's already available**. Most importantly, check if you can get the desired behavior by changing configuration.
-* **Perform a [cursory search](https://github.com/ddspog/str/issues?utf8=%E2%9C%93&q=is%3Aissue+user%3Addspog+)** to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
+* **Perform a [cursory search](https://github.com/ddsgok/str/issues?utf8=%E2%9C%93&q=is%3Aissue+user%3Addspog+)** to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
 
 #### How Do I Submit A (Good) Enhancement Suggestion
 
@@ -113,8 +113,8 @@ You can find the issues templates [here](ISSUE_TEMPLATE.md). But they're already
 
 Unsure where to begin contributing to str? You can start by looking through these `beginner` and `help-wanted` issues:
 
-* [Beginner issues](https://github.com/ddspog/str/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Abeginner+label%3Ahelp-wanted+user%3Aatom+sort%3Acomments-desc+) - issues which should only require a few lines of code, and a test or two.
-* [Help wanted issues](https://github.com/ddspog/str/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted+sort%3Acomments-desc+) - issues which should be a bit more involved than `beginner` issues.
+* [Beginner issues](https://github.com/ddsgok/str/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Abeginner+label%3Ahelp-wanted+user%3Aatom+sort%3Acomments-desc+) - issues which should only require a few lines of code, and a test or two.
+* [Help wanted issues](https://github.com/ddsgok/str/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted+sort%3Acomments-desc+) - issues which should be a bit more involved than `beginner` issues.
 
 Both issue lists are sorted by total number of comments. While not perfect, number of comments is a reasonable proxy for impact a given change will have.
 

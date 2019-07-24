@@ -1,4 +1,4 @@
-# str [![GoDoc](https://godoc.org/github.com/ddspog/str?status.svg)](https://godoc.org/github.com/ddspog/str) [![Go Report Card](https://goreportcard.com/badge/github.com/ddspog/str)](https://goreportcard.com/report/github.com/ddspog/str) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Travis CI](https://travis-ci.org/ddspog/str.svg?branch=master)](https://travis-ci.org/ddspog/str)
+# str [![GoDoc](https://godoc.org/github.com/ddsgok/str?status.svg)](https://godoc.org/github.com/ddsgok/str) [![Go Report Card](https://goreportcard.com/badge/github.com/ddsgok/str)](https://goreportcard.com/report/github.com/ddsgok/str) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Travis CI](https://travis-ci.org/ddsgok/str.svg?branch=master)](https://travis-ci.org/ddsgok/str)
 
 by [ddspog](http://github.com/ddspog)
 
@@ -6,14 +6,14 @@ Package **str** represents a string production line.
 
 ## License
 
-You are free to copy, modify and distribute **str** package with attribution under the terms of the MIT license. See the [LICENSE](https://github.com/ddspog/str/blob/master/LICENSE) file for details.
+You are free to copy, modify and distribute **str** package with attribution under the terms of the MIT license. See the [LICENSE](https://github.com/ddsgok/str/blob/master/LICENSE) file for details.
 
 ## Installation
 
 Install **str** package with:
 
 ```shell
-go get github.com/ddspog/str
+go get github.com/ddsgok/str
 ```
 
 ## How to use

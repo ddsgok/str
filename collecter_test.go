@@ -2,7 +2,7 @@ package str_test
 
 import (
 	"github.com/ddsgok/bdd"
-	"github.com/ddspog/str"
+	"github.com/ddsgok/str"
 	"testing"
 )
 
