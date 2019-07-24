@@ -1,21 +1,21 @@
 "a text that equal %[input.text]q":
-- input:  { text: "Hi Oi Ola", sep: " ", n: 1 }
+- input:  { text: "Hi Oi Ola", sep: " ", ni: 1 }
   golden: { arr: ["Hi Oi Ola"], anom_arr: ["Hi Oi Ola"] }
   
-- input:  { text: "Hi Oi Ola", sep: " ", n: 2 }
+- input:  { text: "Hi Oi Ola", sep: " ", ni: 2 }
   golden: { arr: ["Hi", "Oi Ola"], anom_arr: ["Hi", "Oi Ola"] }
 
-- input:  { text: "Hi Oi Ola", sep: " ", n: 3 }
+- input:  { text: "Hi Oi Ola", sep: " ", ni: 3 }
   golden: { arr: ["Hi", "Oi", "Ola"], anom_arr: ["Hi", "Oi", "Ola"] }
 
-- input:  { text: "Ola", sep: " ", n: 0 }
+- input:  { text: "Ola", sep: " ", ni: 1 }
   golden: { arr: ["Ola"], anom_arr: ["Ola"] }
 
-- input:  { text: "Test_input_two", sep: "_", n: 2 }
+- input:  { text: "Test_input_two", sep: "_", ni: 2 }
   golden: { arr: ["Test", "input_two"], anom_arr: ["Test", "input_two"] }
 
-- input:  { text: "Test_input_two", sep: "_", n: 3 }
+- input:  { text: "Test_input_two", sep: "_", ni: 3 }
   golden: { arr: ["Test", "input", "two"], anom_arr: ["Test", "input", "two"] }
 
-- input:  { text: "Test_input_two", sep: " ", n: 0 }
+- input:  { text: "Test_input_two", sep: " ", ni: 1 }
   golden: { arr: ["Test_input_two"], anom_arr: ["Test_input_two"] }

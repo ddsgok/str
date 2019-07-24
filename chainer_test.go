@@ -130,9 +130,9 @@ func Test_Chainer_SplitN(t *testing.T) {
 	given := bdd.Sentences().Golden()
 
 	input, gold := &struct {
-		Text string `yaml:"text"`
-		Sep  string `yaml:"sep"`
-		N    int    `yaml:"n"`
+		Text   string `yaml:"text"`
+		Sep    string `yaml:"sep"`
+		NItems int    `yaml:"ni"`
 	}{}, &struct {
 		Arr     []string      `yaml:"arr"`
 		AnomArr []interface{} `yaml:"anom_arr"`
@@ -142,8 +142,8 @@ func Test_Chainer_SplitN(t *testing.T) {
 		golden.Load(input, gold)
 		text := input.Text
 
-		when("sa := str.New(text).SplitN(%[input.sep]q, %[input.n]q) is called", func(it bdd.It) {
-			sa := str.New(text).SplitN(input.Sep, input.N)
+		when("sa := str.New(text).SplitN(%[input.sep]q, %[input.ni]d) is called", func(it bdd.It) {
+			sa := str.New(text).SplitN(input.Sep, input.NItems)
 
 			arr := sa.Array()
 			anomArr := sa.AnomArray()
