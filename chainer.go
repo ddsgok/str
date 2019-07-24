@@ -17,12 +17,24 @@ type chained string
 type Chainer interface {
 	Printer
 	Split(string) Splitter
+	SplitN(string, int) Splitter
 }
 
 // Split separates string to a Splitter, an array of strings. It uses
 // separator received in strings.Split to do the conversion.
 func (c chained) Split(sep string) (s Splitter) {
 	s = splitted(strings.Split(string(c), sep))
+	return
+}
+
+// SplitN separates string to a Splitter, an array of strings. It uses
+// separator received in strings.Split to do the conversion. Contains
+// a limiter N to count desired number of substrings, following:
+//	n > 0: at most n substrings; the last substring will be the unsplit remainder.
+//	n == 0: the result is nil (zero substrings)
+//	n < 0: all substrings
+func (c chained) SplitN(sep string, n int) (s Splitter) {
+	s = splitted(strings.SplitN(string(c), sep, n))
 	return
 }
 
